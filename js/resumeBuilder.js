@@ -139,15 +139,14 @@ function displayBio (){
 	var bio = {
 		"name" : "Marguerite Halley",
 		"role" : "Web Developer",
-		"contacts" : [
+		"contacts" :
 			{
 				"mobile" : "314-640-4656",
 				"email" : "marguerite.e.halley@gmail.com",
 				"github" : "mhalley",
 				"twitter" : "mhalley1",
 				"location" : "St. Louis, MO"
-			}
-		],
+			},
 		"welcomeMessage" : "I am a champion for users and streamlined user experiences. I believe in being a jack of all trades and a master of some. I love every part of working in this fascinating, ever-changing digital age. I have worked various positions in web during my career, including web design, social media, video/image editing, content strategy, information architecture and usability testing. Let's talk about how I can help you take your digital project to the next level.",
 		"skills": [
 			"web design", "content strategy", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON"
@@ -197,6 +196,8 @@ function displayBio (){
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
 		$("#skills").append(formattedSkill);
 	};
+
+	window.bio = bio;
 
 };
 
@@ -266,6 +267,7 @@ function displayWork (){
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedDescription);
 	};
+	window.work = work;
 }
 
 displayWork ();
@@ -423,7 +425,7 @@ function displayEducation (){
 		$(".education-entry:last").append(formattedURL);
 	};
 
-
+	window.education = education;
 }
 displayEducation ();
 
