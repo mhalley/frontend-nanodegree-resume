@@ -144,14 +144,15 @@ function displayBio (){
 				"mobile" : "314-640-4656",
 				"email" : "marguerite.e.halley@gmail.com",
 				"github" : "mhalley",
-				"twitter" : "mhalley1"
+				"twitter" : "mhalley1",
+				"location" : "St. Louis, MO"
 			}
 		],
 		"welcomeMessage" : "I am a champion for users and streamlined user experiences. I believe in being a jack of all trades and a master of some. I love every part of working in this fascinating, ever-changing digital age. I have worked various positions in web during my career, including web design, social media, video/image editing, content strategy, information architecture and usability testing. Let's talk about how I can help you take your digital project to the next level.",
 		"skills": [
-			"web design", "content strategy", "xHTML", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON", "XML", "PHP", "ActionScript", "social media engagement & advertising", "usability testing", "evaluation and analytics", "Market Research", "SEO"
+			"web design", "content strategy", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON"
 			],
-		"bioPic" : "images/fry.jpg"
+		"bioPic" : "images/fry.jpg",
 	};
 	//display bioPic
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
@@ -194,24 +195,6 @@ function displayBio (){
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
 		$("#skills").append(formattedSkill);
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[7]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[8]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[9]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[10]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[11]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[12]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[13]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[14]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[15]);
 		$("#skills").append(formattedSkill);
 	};
 
@@ -355,28 +338,28 @@ function displayEducation (){
 		"schools": [
 			{
 				"name": "Neilson Norman Group",
-				"city": "San Francisco, CA",
+				"location": "San Francisco, CA",
 				"degree" : "Usability Certification",
 				"major"	: "Interaction Design",
 				"graduation" : "April 2015"
 			},
 			{
 				"name": "University of Missouri",
-				"city": "Columbia, MO",
+				"location": "Columbia, MO",
 				"degree" : "MBA",
 				"major"	: "Management: Entrepreneurship",
 				"graduation" : "December 2012"
 			},
 			{
 				"name": "University of Missouri",
-				"city": "Columbia, MO",
+				"location": "Columbia, MO",
 				"degree" : "Masters",
 				"major"	: "Journalism: Visual Editing and Management",
 				"graduation" : "December 2011"
 			},
 			{
 				"name": "University of Missouri",
-				"city": "Columbia, MO",
+				"location": "Columbia, MO",
 				"degree" : "Bachelors",
 				"major"	: "Anthropology",
 				"graduation" : "December 2008"
@@ -415,7 +398,7 @@ function displayEducation (){
 		var formattedMajor = HTMLschoolDegree.replace("%data%", education.schools[school].major);
 		var formattedGraduation = HTMLschoolDates.replace("%data%", education.schools[school].graduation);
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-		var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
+		var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 
 		$(".education-entry:last").append(formattedName);
 		$(".education-entry:last").append(formattedCity);
@@ -445,6 +428,6 @@ function displayEducation (){
 displayEducation ();
 
 //show map of where lived
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
 
 
