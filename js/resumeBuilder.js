@@ -28,9 +28,10 @@ function displayBio (){
 			"web design", "content strategy", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON"
 			],
 		"bioPic" : "images/ProfilePic.jpg",
+		"bioPicAlt" : "headshot of Marguerite Halley"
 	};
 	//display bioPic
-	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic).replace("%alt%", bio.bioPicAlt);
 	$("#header").append(formattedBioPic);
 
 	//display Welcome Message
@@ -166,21 +167,24 @@ projects.display = function () {
 				"dates" : "May 2015",
 				"description" : "I was tasked to replicate and then customize a Photoshop mock-up in HTML5 and CSS. Using the Twitter Bootstrap framework, I created a fully responsive site with optimized images.",
 				"images" : "images/portfolio.jpg",
-				"url" : "http://marguerite-halley.com"
+				"url" : "http://marguerite-halley.com",
+				"alt" : "screenshot of the portfolio project site"
 			},
 			{
 				"title" : "Arcade Game Clone",
 				"dates" : "June 2015",
 				"description" : "I will be replicating the game frogger using HTML5 Canvas.",
 				"images" : "images/197x148.gif",
-				"url" : "http://marguerite-halley.com"
+				"url" : "http://marguerite-halley.com",
+				"alt" : " "
 			},
 			{
 				"title" : "Neighborhood Map",
 				"dates" : "June 2015",
 				"description" : "I will create an interactive map.",
 				"images" : "images/197x148.gif",
-				"url" : "http://marguerite-halley.com"
+				"url" : "http://marguerite-halley.com",
+				"alt" : " "
 			}
 		]
 	};
@@ -194,7 +198,7 @@ projects.display = function () {
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].url);
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images).replace("#", projects.projects[project].url);
+		var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images).replace("#", projects.projects[project].url).replace("%alt%", projects.projects[project].alt);
 
 		$(".project-entry:last").append(formattedTitle);
 		$(".project-entry:last").append(formattedDates);
