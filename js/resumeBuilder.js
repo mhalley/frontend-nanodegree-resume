@@ -8,131 +8,6 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").prepend
 
-//var work = {};
-//work.position = "Web Developer";
-//work.employer = "Washington University";
-//work.years = 2;
-//work.city = "St. Louis";
-
-//$("#main").append(bio.name);
-//$("#main").append(work["position"]);
-//$("#main").append(education["name"]);
-
-
-//WHILE LOOPS
-//var cameron = {};
-//cameron.job = "course dev";
-
-//var  makeCourse = function () {
-	//make a course
-//	console.log("Make a course");
-//}
-
-//var courses = 0;
-//while(cameron.job ==== "course dev") {
-//	makeCourse ();
-//	courses = courses + 1;
-//	if (courses ==== 10) {
-//		cameron.job = "learning specialist";
-//	}
-//}
-
-//console.log(cameron.job);
-
-//FOR LOOPS
-//for (var i = 0; i < 9; i++) {
-	//print numbers 0-8
-//	console.log(i);
-//}
-
-//FOR IN LOOPS
-//var countries = [
-//	"Germany", "Argentina", "Brazil", "Netherlands"
-//];
-
-//for (country in countries) {
-	//print countries
-//	console.log(countries[country])
-//};
-
-//FUNCTIONS
-//function locationFinder () {
-//	var locations = []
-//	loactions.push(bio.contacts.location);
-//	for (var school in education.schools) {
-//		locations.push(education.schools[school].location);
-//	}
-//	for (var job in work.jobs) {
-//		locations.push(work.jobs[job].location);
-//	}
-//	return locations;
-//}
-
-//write fuction to take in work object; return array of locations in work. use push.
-//My solution, which funtioned
-//function locationizer() {
-//    var locations = [];
-
-//	for (var job in work.jobs) {
-//		locations.push(work.jobs[job].location);
-//	}
-
-//	return locations;
-//}
-
-//Their solution
-
-//function locationizer(work_obj) {
-//    var locationArray = [];
-
-//	for (job in work_obj.jobs) {
-//		var newLocation = work_obj.jobs[job].location);
-//		locationArray.push(newLocation);
-//	}
-
-//	return locationArray;
-//}
-
-//My solution
-//$("#main").append(internationalizeButton);
-
-//var name = "sebastian thrun";
-
-//function inName(oldName) {
-//    var finalName = oldName;
-//    var names = oldName.split(" ");
-//    names[1] = names[1].toUpperCase();
-//    names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
-//    finalName = names.join(" ");
-    // Don't delete this line!
-//    return finalName;
-//}
-
-//console.log (inName(name));
-
-//Their solution
-//function inName(name) {
-//	name = name.trim().split(" ");
-//	console.log(name);
-//	name[1] = name[1].toUpperCase();
-//	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase;
-//
-//	return name[0] + " " +name[1];
-//}
-
-//$("#main").append(internationalizeButton);
-
-
-
-
-//var skills =
-//[ "web design", "content strategy", "xHTML", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON", "XML", "PHP", "ActionScript", "social media engagement & advertising", "usability testing", "evaluation and analytics", "Market Research", "SEO"
-//]
-
-//$("#main").append(skills[0]);
-//$("#main").append(skills.length);
-
-
 //Defines and displays all bio info
 function displayBio (){
 	//bio info details
@@ -152,7 +27,7 @@ function displayBio (){
 		"skills": [
 			"web design", "content strategy", "HTML5", "CSS", "Twitter Bootstrap", "JavaScript", "JSON"
 			],
-		"bioPic" : "images/fry.jpg",
+		"bioPic" : "images/ProfilePic.jpg",
 	};
 	//display bioPic
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
@@ -204,9 +79,6 @@ function displayBio (){
 
 displayBio ();
 
-
-//use http://jsonlint.com/ to lint JSON (JavaScript Object Notation)
-
 //Defines and displays all Work Experience info
 function displayWork (){
 	//defines work info
@@ -217,35 +89,35 @@ function displayWork (){
 				"employer" : "Public Affairs at Washington University in St. Louis",
 				"location" : "St. Louis, MO",
 				"dates" : "February 2014 - Present",
-				"description" : "Consult with campus partners on digital content strategy; Build new websites and reimagine existing websites using the university’s new WordPress theme; Plan process for university’s new managed self-service website option and create training materials"
+				"description" : "<li>Consult with campus partners on digital content strategy</li><li>Build new websites and reimagine existing websites using the university’s new WordPress theme</li><li>Plan process for university’s new managed self-service website option and create training materials</li>"
 			},
 			{
 				"title" :"Online Communications and Emerging Media Specialist",
 				"employer" : "Brown School at Washington University in St. Louis",
 				"location" : "St. Louis, MO",
 				"dates" : "February 2013 - January 2014",
-				"description" : "Analyzed website, social media data to develop strategic ways to further mission and reach target audiences of schools and centers; Updated, created, and troubleshot content for internal and external sites, including building sub-sites under deadline; Managed social media communications & campaigns on Twitter, Facebook, LinkedIn, Instagram; Managed special web and video projects in addition to social media campaigns"
+				"description" : "<li>Analyzed website, social media data to develop strategic ways to further mission and reach target audiences of schools and centers</li><li>Updated, created, and troubleshot content for internal and external sites, including building sub-sites under deadline; Managed social media communications & campaigns on Twitter, Facebook, LinkedIn, Instagram</li><li>Managed special web and video projects in addition to social media campaigns</li>"
 			},
 			{
 				"title" :"Assistant Communications Coordinator",
 				"employer" : "Trulaske College of Business, University of Missouri",
 				"location" : "Columbia, MO",
 				"dates" : "August 2011 - January 2013",
-				"description" : "Researched competitors, formulated Information Architecture and assisted with redesign of the site, business.missouri.edu, in Drupal for launch in January; Worked with departmental liaisons to develop social media and web communication for college; Worked with departmental liaisons to develop social media and web communication for college; Coordinated social media communications and campaigns on Twitter, Facebook, and Pinterest"
+				"description" : "<li>Researched competitors, formulated Information Architecture and assisted with redesign of the site, business.missouri.edu, in Drupal for launch in January</li><li>Worked with departmental liaisons to develop social media and web communication for college</li><li>Worked with departmental liaisons to develop social media and web communication for college</li><li>Coordinated social media communications and campaigns on Twitter, Facebook, and Pinterest</li>"
 			},
 			{
 				"title" :"Media Consultant",
 				"employer" : "Associated Press",
 				"location" : "New York, NY",
 				"dates" : "January 2012 - May 2012",
-				"description" : "Conceptualized strategies to monetize unused firm resources; Assisted in developing a tablet-­based multimedia product utilizing archival digital resources; Prepared marketing strategy and financials for product implementation"
+				"description" : "<li>Conceptualized strategies to monetize unused firm resources</li><li>Assisted in developing a tablet-­based multimedia product utilizing archival digital resources</li><li>Prepared marketing strategy and financials for product implementation</li>"
 			},
 			{
 				"title" :"Website and Exhibit Design Intern",
 				"employer" : "McDougall Center for Photojournalism Studies",
 				"location" : "Columbia, MO",
 				"dates" : "January 2011 - June 2011",
-				"description" : "Redesigned gallery website, mcdougallcenter.missouri.edu, to improve usability; Produced video and multimedia for exhibit space; Created online interactive educational exhibits"
+				"description" : "<li>Redesigned gallery website, mcdougallcenter.missouri.edu, to improve usability</li><li>Produced video and multimedia for exhibit space</li><li>Created online interactive educational exhibits</li>"
 			}
 		]
 	};
@@ -258,14 +130,16 @@ function displayWork (){
 		//displays jobs details
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		var formattedEmployerTitle =  formattedTitle + formattedEmployer;
+
 		var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		var formattedLocationDates = formattedLocation + formattedDates;
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
 
 		$(".work-entry:last").append(formattedEmployerTitle);
-		$(".work-entry:last").append(formattedLocation);
-		$(".work-entry:last").append(formattedDates);
+		$(".work-entry:last").append(formattedLocationDates);
 		$(".work-entry:last").append(formattedDescription);
 	};
 	window.work = work;
@@ -288,22 +162,25 @@ projects.display = function () {
 	var projects = {
 		"projects" : [
 			{
-				"title" : "Project 1",
+				"title" : "Portfolio Site",
 				"dates" : "May 2015",
-				"description" : "This project was...",
-				"images" : "images/197x148.gif"
+				"description" : "I was tasked to replicate and then customize a Photoshop mock-up in HTML5 and CSS. Using the Twitter Bootstrap framework, I created a fully responsive site with optimized images.",
+				"images" : "images/portfolio.jpg",
+				"url" : "http://marguerite-halley.com"
 			},
 			{
-				"title" : "Project 2",
+				"title" : "Arcade Game Clone",
 				"dates" : "June 2015",
-				"description" : "This project was...",
-				"images" : "images/197x148.gif"
+				"description" : "I will be replicating the game frogger using HTML5 Canvas.",
+				"images" : "images/197x148.gif",
+				"url" : "http://marguerite-halley.com"
 			},
 			{
-				"title" : "Project 3",
+				"title" : "Neighborhood Map",
 				"dates" : "June 2015",
-				"description" : "This project was...",
-				"images" : "images/197x148.gif"
+				"description" : "I will create an interactive map.",
+				"images" : "images/197x148.gif",
+				"url" : "http://marguerite-halley.com"
 			}
 		]
 	};
@@ -314,22 +191,15 @@ projects.display = function () {
 		$("#projects").append(HTMLprojectStart);
 
 		//displays project info
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].url);
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+		var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images).replace("#", projects.projects[project].url);
 
 		$(".project-entry:last").append(formattedTitle);
 		$(".project-entry:last").append(formattedDates);
 		$(".project-entry:last").append(formattedDescription);
 		$(".project-entry:last").append(formattedImages);
-
-//		if (projects.projects[project].images.length > 0) {
-//			for (images in projects.projects[project].images) {
-//				var formattedImages = HTMLprojectImage.replace("%data%", projects.projects[project].images[images]);
-//				$(".project-entry:last").append(formattedImages);
-//			}
-//		}
 	}
 };
 projects.display ();
@@ -398,16 +268,16 @@ function displayEducation (){
 
 		//displays schools details
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
-		var formattedMajor = HTMLschoolDegree.replace("%data%", education.schools[school].major);
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		var formattedDegreeMajor = formattedDegree + formattedMajor;
 		var formattedGraduation = HTMLschoolDates.replace("%data%", education.schools[school].graduation);
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
 		var formattedCity = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		var formattedCityGraduation = formattedCity + formattedGraduation;
 
+		$(".education-entry:last").append(formattedDegreeMajor);
+		$(".education-entry:last").append(formattedCityGraduation);
 		$(".education-entry:last").append(formattedName);
-		$(".education-entry:last").append(formattedCity);
-		$(".education-entry:last").append(formattedDegree);
-		$(".education-entry:last").append(formattedMajor);
-		$(".education-entry:last").append(formattedGraduation);
 	};
 
 	//displays Online Classes section header
@@ -415,15 +285,15 @@ function displayEducation (){
 
 	for (course in education.onlineCourses) {
 		//displays schools details
-		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace("#", education.onlineCourses[course].url);
 		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var formattedTitleSchool = formattedTitle + formattedSchool;
 		var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url).replace("#", education.onlineCourses[course].url);
 
-		$(".education-entry:last").append(formattedTitle);
-		$(".education-entry:last").append(formattedSchool);
-		$(".education-entry:last").append(formattedDates);
-		$(".education-entry:last").append(formattedURL);
+		$(".online-entry:last").append(formattedTitleSchool);
+		$(".online-entry:last").append(formattedDates);
+		$(".online-entry:last").append(formattedURL);
 	};
 
 	window.education = education;
