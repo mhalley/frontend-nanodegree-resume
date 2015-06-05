@@ -26,7 +26,6 @@ bio.display = function () {
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
-	$("#header").prepend
 
 	//display bioPic
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic).replace("%alt%", bio.bioPicAlt);
@@ -47,33 +46,17 @@ bio.display = function () {
 		$(".flex-box").append(formattedEmail);
 		$(".flex-box").append(formattedGithub);
 		$(".flex-box").append(formattedTwitter);
-	};
+	}
 
 	//display skills
-	if (bio.skills.length > 0) {
-
-		//display skills section heading
-		$("#header").append(HTMLskillsStart);
-
-		//display skills content
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#header").append(HTMLskillsStart);
+	for (var skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[6]);
-		$("#skills").append(formattedSkill);
-	};
+	}
 };
 
-bio.display ();
+bio.display();
 
 //Defines all Work Experience info
 var work = {
@@ -136,8 +119,8 @@ work.display = function () {
 		$(".work-entry:last").append(formattedEmployerTitle);
 		$(".work-entry:last").append(formattedLocationDates);
 		$(".work-entry:last").append(formattedDescription);
-	};
-}
+	}
+};
 
 work.display();
 
@@ -268,7 +251,7 @@ education.display = function () {
 		$(".education-entry:last").append(formattedDegreeMajor);
 		$(".education-entry:last").append(formattedCityGraduation);
 		$(".education-entry:last").append(formattedName);
-	};
+	}
 
 	//displays Online Classes section header
 	$("#education").append(HTMLonlineClasses);
@@ -284,8 +267,8 @@ education.display = function () {
 		$(".online-entry:last").append(formattedTitleSchool);
 		$(".online-entry:last").append(formattedDates);
 		$(".online-entry:last").append(formattedURL);
-	};
-}
+	}
+};
 
 education.display();
 
